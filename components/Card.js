@@ -1,8 +1,10 @@
 import React from "react";
 import { Platform, StyleSheet } from "react-native";
-import { Tile } from "react-native-elements;";
+import { Tile } from "react-native-elements";
 
-import Layourt from "../constants/Layout";
+import Layout from "../constants/Layout";
+
+const BOTTOM_BAR_HEIGHT = !Platform.isPad ? 29 : 49;
 
 export default function Card(props) {
   const { pic, title, caption } = props;
@@ -29,8 +31,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     width: Layout.window.width - 30,
     height: Layout.window.height - BOTTOM_BAR_HEIGHT * 6,
-    borderRadius: 20,
-    overflow: "hidden"
+    borderRadius: 20
   },
   title: {
     position: "absolute",
