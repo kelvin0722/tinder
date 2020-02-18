@@ -51,7 +51,6 @@ export default function App(props) {
   } else {
     return (
       <View style={styles.container}>
-        {Platform.OS === "ios" && <StatusBar barStyle="default" />}
         <NavigationContainer
           ref={containerRef}
           initialState={initialNavigationState}
@@ -68,6 +67,7 @@ export default function App(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff"
+    backgroundColor: "#fff",
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
   }
 });

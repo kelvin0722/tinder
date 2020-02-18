@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Text, SafeAreaView, StyleSheet } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 import Swiper from "react-native-deck-swiper";
 
 import Card from "../components/Card";
@@ -7,7 +7,7 @@ import Pics from "../constants/Pics";
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <Swiper
         cards={Pics}
         renderCard={Card}
@@ -16,7 +16,7 @@ export default function HomeScreen() {
         cardHorizontalMargin={0}
         stackSize={2}
       />
-    </SafeAreaView>
+    </View>
   );
 }
 
